@@ -1,0 +1,440 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox container for the entire page */
+#content-wrapper {
+    flex: 1; /* This will make the main content area expand to fill available space */
+}
+
+/* Header styles */
+header {
+    background-color: #24292e;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap for smaller screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #004a9e;
+}
+
+/* Hero Section styles */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #0366d6; /* Blue background color */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* About Section styles */
+.about {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #24292e; /* Match with your header/footer background */
+    color: white;
+}
+
+/* Button styles */
+.btn {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent; /* Border set to transparent initially */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Removes underline if used with <a> */
+    color: #0366d6; /* Default text color (blue) */
+    background-color: white; /* White background */
+}
+
+.btn:hover {
+    background-color: #004a9e; /* Blue background on hover */
+    color: white; /* Text color turns white */
+    border-color: #004a9e; /* Border color matches background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5); /* Blue focus ring */
+}
+
+/* PDF Download Section styles */
+.pdf-download {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1e1e1e; /* Dark background to match your theme */
+    color: #ffffff; /* White text color */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.pdf-download h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.pdf-download p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.pdf-download .btn {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Removes underline if used with <a> */
+    color: #ffffff; /* White text color */
+    background-color: #0366d6; /* Blue background */
+}
+
+.pdf-download .btn:hover {
+    background-color: #004a9e; /* Darker blue background on hover */
+    color: #ffffff; /* Text color remains white */
+    border-color: #004a9e; /* Border color matches background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.pdf-download .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5); /* Blue focus ring */
+}
+
+/* Responsive Design */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+
+    .hero {
+        padding: 80px 20px; /* Adjust padding */
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .about {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .about h2 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .about p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .pdf-download {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .pdf-download h2 {
+        font-size: 1.8em; /* Adjust font size for smaller screens */
+    }
+
+    .pdf-download p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px; /* Further reduce padding */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Further reduce font size */
+    }
+
+    .hero p {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .about {
+        padding: 20px 10px; /* Further reduce padding */
+    }
+
+    .about h2 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .about p {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .pdf-download {
+        padding: 20px 10px; /* Further reduce padding */
+    }
+
+    .pdf-download h2 {
+        font-size: 1.5em; /* Further reduce font size */
+    }
+
+    .pdf-download p {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+}
+
+/* Styles for the Stocks button */
+.btn-stocks {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000; /* Black text color */
+    background-color: white; /* White background */
+}
+
+.btn-stocks:hover {
+    background-color: #808080; /* Gray background on hover */
+    border-color: #808080; /* Border color matches background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#stockChart {
+    width: 60% !important;
+    height: 60% !important;
+}
+
+/* Språkväljare modal */
+#language-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content: samma blå färg som hero-klassen */
+#language-modal .modal-content {
+    background-color: #0366d6; /* Samma blå färg som .hero-klassen */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1001;
+    width: 300px; /* Bredd på rutan */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Liten skugga för djup */
+}
+
+#language-modal .modal-content h2 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Vit textfärg för kontrast */
+}
+
+/* Centrera flaggorna i mitten av modalen */
+.flag-container {
+    display: flex;
+    justify-content: space-around; /* Jämnt avstånd mellan flaggorna */
+    align-items: center;
+    margin-bottom: 20px; /* Avstånd till texten */
+}
+
+.flag-button {
+    text-align: center;
+}
+
+.flag-button img {
+    width: 80px; /* Bredd på flaggan */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrerar flaggan */
+    border: 3px solid #ffffff; /* Vit kantlinje runt flaggorna */
+    border-radius: 5px; /* Gör kantlinjen lite rundad */
+}
+
+/* Knapparna med centrerad text */
+.btn {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+    text-align: center; /* Texten centreras */
+    display: inline-block;
+    text-decoration: none;
+    color: #0366d6; /* Standard textfärg (blå) */
+    background-color: white; /* Vit bakgrund */
+    width: 100px; /* Fast bredd för knapparna */
+    margin-top: 10px; /* Lägger till lite utrymme ovanför knapparna */
+    line-height: 1.5em; /* Ger tillräckligt med vertikalt utrymme för texten */
+}
+
+.btn:hover {
+    background-color: #004a9e; /* Blå bakgrund vid hovring */
+    color: white; /* Textfärg blir vit */
+    border-color: #004a9e; /* Kantfärg matchar bakgrund vid hovring */
+    transform: scale(1.05); /* Liten förstoring vid hovring */
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5); /* Blå fokusring */
+}
+
+/* Blur-effekt på bakgrunden */
+body.modal-active #content {
+    filter: blur(8px);
+    pointer-events: none; /* Inaktivera interaktion med bakgrunden */
+}
+
+.hero .btn {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px; /* Standard padding för att rymma texten */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+    text-align: center; /* Centrerar texten horisontellt */
+    display: inline-block;
+    text-decoration: none;
+    color: #0366d6; /* Blå textfärg */
+    background-color: white; /* Vit bakgrund */
+    white-space: nowrap; /* Förhindrar radbrytning */
+    box-sizing: border-box; /* Inkluderar padding och border i bredden */
+    width: auto; /* Låter knappen justera sin bredd efter innehållet */
+    max-width: 100%; /* Förhindrar att knappen blir för bred */
+}
+
+.hero .btn:hover {
+    background-color: #004a9e; /* Blå bakgrund vid hovring */
+    color: white; /* Textfärg blir vit */
+    border-color: #004a9e; /* Kantfärg matchar bakgrund vid hovring */
+    transform: scale(1.05); /* Liten förstoring vid hovring */
+}
+
+.hero .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5); /* Blå fokusring */
+}
+
+.btn {
+    display: inline-block;
+    font-size: 16px; /* Tillräckligt stor text för att vara läsbar */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 30px; /* Extra padding för att ge utrymme runt texten */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #0366d6; /* Blå textfärg */
+    background-color: white; /* Vit bakgrund */
+    white-space: nowrap; /* Förhindrar radbrytning */
+    box-sizing: border-box; /* Inkluderar padding och border i knappens totala bredd */
+    width: auto; /* Knappen anpassar sig efter textens bredd */
+    max-width: 100%; /* Förhindrar att knappen blir bredare än sin container */
+}
+
+.btn:hover {
+    background-color: #004a9e; /* Blå bakgrund vid hovring */
+    color: white; /* Textfärg blir vit */
+    border-color: #004a9e; /* Kantfärg matchar bakgrund vid hovring */
+    transform: scale(1.05); /* Liten förstoring vid hovring */
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.5); /* Blå fokusring */
+}
